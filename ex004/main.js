@@ -2,5 +2,6 @@
 
 let nome = 'Rogerio';
 let sobrenome = 'Jesuino';
+let nomeCompleto = nome + " " + sobrenome;
 
-console.log("Meu nome é ", nome, sobrenome);
+console.log("Meu nome é ", nomeCompleto);
