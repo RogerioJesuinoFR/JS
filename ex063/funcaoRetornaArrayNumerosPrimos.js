@@ -4,6 +4,8 @@ function primosAteN(num){
     let primos = [];
     for(let i = 2;i <= num;i++){
         if(ePrimo(i)){
+
+            //metodo push inclue o numero no array
             primos.push(i);
         }
     }
