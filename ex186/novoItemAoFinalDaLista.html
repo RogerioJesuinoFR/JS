@@ -1,0 +1,27 @@
+<!--Dada uma página com uma lista não ordenada (<ul>) de itens, escreva uma função JavaScript que adicione um novo item ao final dessa lista-->
+    
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lista nao ordenada</title>
+</head>
+<body>
+    <ul id="item-list">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+    <button onclick="addItem()">Add Item</button>
+
+    <script>
+        function addItem(){
+            const ul = document.querySelector('#item-list');
+            const li = document.createElement('li');
+            li.textContent = `Item ${ul.children.length + 1}`;
+            ul.appendChild(li);
+        }
+    </script>
+</body>
+</html>
