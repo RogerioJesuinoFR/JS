@@ -1,0 +1,23 @@
+<!--Ao clicar em um botão, adicione ou remova uma classe "ativo" de um elemento.-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>remove classe</title>
+</head>
+<body>
+    <div id="toggle-element">
+        Clique no botão para alternar minha classe!
+    </div>
+    <button onclick="toggleClass()">Toggle Classe</button>
+
+    <script>
+        function toggleClass(){
+            const div = document.querySelector('#toggle-element');
+            div.classList.toggle('ativo');
+        }
+    </script>
+</body>
+</html>

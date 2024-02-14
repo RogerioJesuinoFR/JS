@@ -1,0 +1,33 @@
+<!--Em um campo de texto, exiba um contador de caracteres restantes. Permita no máximo 150 caracteres.-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de caracteres</title>
+</head>
+<body>
+    <textarea id="text-field" oninput="updateCounter()"></textarea>
+    <div>
+        Caracteres restantes: <span id="counter">150</span>
+    </div>
+
+    <script>
+        function updateCounter(){
+            const textField = document.querySelector('#text-field');
+            const counter = document.querySelector('#counter');
+            const remaining = 150 - textField.value.length;
+
+            counter.textContent = remaining;
+
+            if(remaining < 0){
+                counter.style.color = 'red';
+                alert("Você excedeu o limite de caracteres!");
+            } else {
+                counter.style.color = 'black';
+            }
+        }
+    </script>
+</body>
+</html>

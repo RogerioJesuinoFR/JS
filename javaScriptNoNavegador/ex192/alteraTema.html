@@ -1,0 +1,36 @@
+<!--Crie um botão que, quando clicado altere o tema da página entre claro e escuro.-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>altera tema</title>
+</head>
+<body>
+    <button onclick="toggleTheme()">Trocar Tema</button>
+    <p>Olha o tema aqui</p>
+    <script>
+        function toggleTheme(){
+            const body = document.querySelector('body');
+            if(body.classList.contains('dark-theme')){
+                body.classList.remove('dark-theme');
+            } else {
+                body.classList.add('dark-theme');
+            }
+        }
+    </script>
+
+    <style>
+        .dark-theme{
+            background-color: black;
+            color: white;
+        }
+
+        p{
+            text-align: center;
+        }
+    </style>
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!--Crie uma função que, ao clicar em um botão, altere a cor de fundo de um parágrafo para azul-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>altera cor parágrafo</title>
+</head>
+<body>
+    <p id="text">Este é um texto.</p>
+    <button onclick="changeColor()">Mudar Cor</button>
+
+    <script>
+        function changeColor(){
+            const p = document.querySelector('#text');
+            p.style.backgroundColor = 'blue';
+        }
+    </script>
+</body>
+</html>

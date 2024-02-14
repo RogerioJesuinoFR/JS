@@ -1,0 +1,33 @@
+<!--Crie um botão que, quando clicado, exiba um modal na tela. O modal deve ter tembém um botão que o feche-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>abre e fecha modal</title>
+</head>
+<body style="background-color: black;">
+    <button onclick="showModal()">
+        Abrir Modal
+    </button>
+    <div id="modal" style="display: none;position: fixed;top: 50%;left: 50%;transform: translate(-50%, -50%);z-index: 10;background-color: white;padding: 20px;">
+        Isso é um modal!
+        <button onclick="closeModal()">
+            Fechar
+        </button>
+    </div>
+
+    <script>
+        function showModal(){
+            const modal = document.querySelector('#modal');
+            modal.style.display = 'block';
+        }
+
+        function closeModal(){
+            const modal = document.querySelector('#modal');
+            modal.style.display = 'none';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!--Crie uma função que adicione uma classe "visível" a um elemento quando ele estiver visível na janela de visualização ao rolar a página-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>classe visível</title>
+</head>
+<body>
+    <div id="scroll-element" style="margin-top: 120vh;">Sou visível agora?</div>
+    <script>
+        window.addEventListener('scroll', function(){
+            const div = document.querySelector('#scroll-element');
+            const rect = div.getBoundingClientRect();
+
+            if(rect.top <= window.innerHeight&&rect.bottom >= 0){
+                div.classList.add('visivel');
+            } else {
+                div.classList.remove('visivel');
+            }
+        });
+    </script>
+</body>
+</html>

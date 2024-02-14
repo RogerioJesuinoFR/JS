@@ -1,0 +1,26 @@
+<!--Crie um botão que altere o conteúdo de um título e de um parágrafo ao mesmo tempo.-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>altera conteúdo</title>
+</head>
+<body>
+    <h1 id="titulo">Olá, Mundo!</h1>
+    <p id="paragrafo">Este é um parágrafo de exemplo.</p>
+    <button id="botao">Clique aqui</button>
+
+    <script>
+        const tituloElemento = document.getElementById("titulo");
+        const paragrafoElemento = document.getElementById("paragrafo");
+        const botaoElemento = document.getElementById("botao");
+
+        botaoElemento.addEventListener("click", function(){
+            tituloElemento.textContent = "Título Modificado";
+            paragrafoElemento.textContent = "Parágrafo alterado após clique!";
+        });
+    </script>
+</body>
+</html>

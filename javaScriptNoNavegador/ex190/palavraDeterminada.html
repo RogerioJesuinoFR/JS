@@ -1,0 +1,36 @@
+<!--Dada uma lista de itens, crie uma função que exiba apenas os itens que contêm uma determinada palavra-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>busca palavra</title>
+</head>
+<body>
+    <ul id="item-list">
+        <li>Maçã</li>
+        <li>Laranja</li>
+        <li>Mamão</li>
+        <li>Morango</li>
+    </ul>
+
+    <input type="text" id="filter-input">
+    <button onclick="filterItems()">Filtrar</button>
+
+    <script>
+        function filterItems(){
+            const filter = document.querySelector('#filter-input').value.toLowerCase();
+            const items = document.querySelectorAll('#item-list li');
+
+            items.forEach(item => {
+                if(item.textContent.toLowerCase().includes(filter)){
+                    item.style.display = '';
+                }else{
+                    item.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
